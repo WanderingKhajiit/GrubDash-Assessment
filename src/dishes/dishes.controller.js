@@ -13,7 +13,7 @@ const list = (req, res, next) =>{
 }
 
 function bodyDataHas(propertyName) {
-    return function (req, res, next) {
+    return function readDishProperty(req, res, next) {
       const { data = {} } = req.body;
       if (data[propertyName]) {
         return next();
